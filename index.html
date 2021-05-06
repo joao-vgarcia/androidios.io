@@ -6,20 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste</title>
 </head>
+
 <body onload="getMobileOperatingSystem()">
-  <h1 id="ti">Testse</h1>
+  <h1 id="ti">Teste</h1>
   <script>
     function getMobileOperatingSystem() {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
 
       if (/android/i.test(userAgent)) {
-        document.getElementById("ti").innerText = "Android";
+        window.open('https://play.google.com/store/apps/details?id=com.whatsapp');
+        return
       }
-
       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        document.getElementById("ti").innerText = "Ai fone";
+        window.open('https://apps.apple.com/br/app/whatsapp-messenger/id310633997');
+        return
       }
+      window.open('https://www.google.com/');
+
+
     }
   </script>
 
